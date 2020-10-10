@@ -1,10 +1,16 @@
-body {font-family: "Palatino Linotype";}
 body {
-    background-color: #343838;
-    color: white;
-  }
+    font-family: "Palatino Linotype";
+    background-color: #c2d8d8d8;
+    color: #343838;
+}
+nav a {color: #ffffff;
+    background-color:#343838;
+    padding: 10px; 
+    margin-bottom: 30px; }
+nav a:hover {background-color: #005F6B;}
 
-h1,h2 {color: #005F6B} 
+
+h1,h2 {color: #008C9E} 
 
 .evenrow {background-color: rgba(113, 132, 173, 0.664);}
 
