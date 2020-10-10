@@ -1,0 +1,13 @@
+body {font-family: "Palatino Linotype";}
+body {
+    background-color: #343838;
+    color: white;
+  }
+
+h1,h2 {color: #005F6B} 
+
+.evenrow {background-color: rgba(113, 132, 173, 0.664);}
+
+h1 {font-size: 2em;}
+
+h2 {font-size: 1.5em;}

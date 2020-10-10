@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="styles.css">
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#try">Try it Out</a>
+  <a href="#about">About</a>
+</div>
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  
+  The js function gets the selected item from drop down and prints it. 
+  I need to think about getting that value and useing its corresponding value (maybe a library needs to be made)
+  and running the python code. and return back to js
+  -create  account for project and get client id
+  I need to examine boil the frog code
+  get input into js
+  >take input into library file that returns country code (>File)
+  >take country code and insert into download link (function)
+  >Take link and run csv parse 
+
+  </head>
+  <body>
+  
+  <form>
+  Select a country:
+  <select id="mySelect">
+    <option>us</option>
+    <option>au</option>
+    <option>br</option>
+    <option>mx</option>
+  </select>
+  <br><br>
+  <input type="button" onclick="getRawData(getCountry(), ',')" value="Enter">
+  </form>
+ 
+  
+
+  <p id="data" ></p>
+  <script type="text/javascript" src="pyconvert.js"></script>
+  </body>
