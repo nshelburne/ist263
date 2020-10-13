@@ -1,7 +1,11 @@
 
 .navbar {
-    background-color: #545C52;
+    background-color: #ffffff;
     overflow: hidden;
+    position: fixed; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   
   /* Style the links inside the navigation bar */
@@ -27,7 +31,7 @@
   }
 
   body {
-    background-image: url(\Media\Mapbackground.png);
+    background-image: url(Media/Mapbackground.png);
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: cover;
@@ -45,6 +49,7 @@
 
   .coloredbox {
     display: block;
+    position: fixed;
     margin: 20px;
     background-color: #C4B7CB;
     border: 1px solid #C4B7CB;
@@ -55,6 +60,7 @@
   }
   .coloredbutton{
       display: block;
+      position: fixed; 
       margin-right: auto;
       margin-left: auto;
       background-color: #C4B7CB;
@@ -62,10 +68,9 @@
       border-radius: 3px;
       width: 300px;
       height: 75px;
-      
-    
-    box-shadow: inset 0px 0px 0px #2F3B47;
-    transition: all 0.5s !important;
+      box-shadow: inset 0px 0px 0px #2F3B47;
+      transition: all 0.5s !important;
+      justify-content: center;
   }
   .coloredbutton:hover {
     box-shadow: inset 300px 0px 0px #2F3B47;

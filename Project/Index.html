@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="styles.css">
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  
+  <head>
+    <div class="navbar">
+    <a class="active" href="#home">Home</a>
+    <a href="#try">Try it Out</a>
+    <a href="#about">About</a>
+    </div>
+
+  </head>
+  
+  <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="coloredbox">
+  
+    <form>
+      <p>Select a country:</p>
+      <br>
+      <select class="centerbox" id="mySelect">
+        <option>us</option>
+        <option>au</option>
+        <option>br</option>
+        <option>mx</option>
+      </select>
+        <br>
+        <br>
+
+        <br>
+      <input class= "coloredbutton" type="button" onclick="getRawData(getCountry(), ',')" value="Enter">
+    </form>
+    </div>
+  
+
+    <p id="entCountry" ></p>
+  
+    <script type="text/javascript" src="pyconvert.js"></script>
+ 
+   
+  </body> 
+
+
+  </html>
