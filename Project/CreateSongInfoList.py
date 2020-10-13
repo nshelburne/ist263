@@ -10,7 +10,7 @@ except ImportError:
 countrycode= input("Please enter country code: \n") #get country code input
 
 req = Request('https://spotifycharts.com/regional/'+countrycode+ '/daily/latest/download') #get data of corosponding country
-req.add_header('User-Agent', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0')
+req.add_header('User-Agent', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0') #bypass denied access becasue of browser
 content = urlopen(req)
 
 df = pd.read_csv(content, usecols = [0,1,2]) #rank, name, artist
