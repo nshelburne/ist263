@@ -1,50 +1,63 @@
 
+
 .navbar {
     background-color: #ffffff;
     overflow: hidden;
     position: fixed; 
     width: 100%;
+    height: 10%;
     display: flex;
     justify-content: center;
+    border: 0;
+    margin-left: 0;
   }
   
   /* Style the links inside the navigation bar */
   .navbar a {
     float: left;
-    color: #ffffff;
+    color: #450920;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 25px;
   }
   
   /* Change the color of links on hover */
   .navbar a:hover {
-    background-color: #98E2C6;
-    color: black;
+    background-color: white;
+    color: #A53860;
   }
   
   /* Add a color to the active/current link */
   .navbar a.active {
-    background-color: #98E2C6;
-    color: black;
+    background-color:white;
+    color: #450920;
+    font-weight: bold;
   }
 
   body {
+    margin-top: 0;
+    margin-left: 0;
     background-image: url(Media/Mapbackground.png);
     background-repeat: no-repeat;
-    background-attachment: fixed;  
+    background-attachment: scroll;  
     background-size: cover;
   }
 
 
-  .centerbox {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
+  .dropdown {
+    display:inline-block;
+    margin-top: 20%;
+    margin-left: 50%;
     background-color: #ffffff;
+    border-radius: 5px;
+    line-height: 1;
     border: 1px solid  #b6aabd;
-    border-radius: 3px;
+    padding: 0;
+    width: 30%;
+    /*position: relative;*/
+    z-index: 10;
+    font-size: 1em;
   }
 
   .coloredbox {
