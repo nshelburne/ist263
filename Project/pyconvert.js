@@ -4,7 +4,9 @@
 function getCountry() {
     var obj = document.getElementById("mySelect");
     document.getElementById("entCountry").innerHTML = obj.options[obj.selectedIndex].text;
+    console.log(obj.options[obj.selectedIndex].text);
     return obj.options[obj.selectedIndex].text;
+
 }
   
 /*used on test variable "data"*/
@@ -18,9 +20,17 @@ function convertCSVToJSON(str, delimiter = ' ') {
 };
 
 function getRawData(str){
-    d3.csv("https://cors-anywhere.herokuapp.com/https://spotifycharts.com/regional/"+str+"/daily/latest/download", function(data1) {
+    d3.csv("https://cors-anywhere.herokuapp.com/https://spotifycharts.com/regional/"+str+"/daily/latest/download", function(data) {
     // Process the data, for the url provided
-           console.log(data1);
+        for (var i = 1; i < data.length; i++) {
+            /*console.log(data[i].Position);
+            console.log(data[i].TrackName);
+            console.log(data[i].Artist);
+            console.log(data[i].Streams);
+            console.log(data[i].Url);*/
+    
+            console.log(data);
+        }
     });
 }
 
