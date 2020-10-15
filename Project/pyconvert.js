@@ -28,7 +28,6 @@ function getRawData(str){
             console.log(data[i].Artist);
             console.log(data[i].Streams);
             console.log(data[i].Url);*/
-    
             console.log(data);
         }
     });
