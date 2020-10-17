@@ -111,7 +111,45 @@
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 25px;
-    height: 0;
-    margin: 0 auto;
-    max-width: 100%;
+  
 }
+.container {
+  padding-top: 200px;
+  padding-left: 200px;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 20px;
+}
+
+.item {
+  color: white;
+  padding-bottom: 1em;
+  font-size: 1em;
+}
+
+.a {
+  background: #450920;
+}
+.b {
+  background: #450920;
+}
+.c {
+  background: #450920;
+}
+.d {
+  background: #450920;
+}
+.e {
+  background: #450920;
+}
+.f {
+  background: #450920;
+}
+.a {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+
