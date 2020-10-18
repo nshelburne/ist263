@@ -1,7 +1,7 @@
 
 
 .navbar {
-    background-color: #D6E2E9;
+    background-color: #EEF3F5;
     overflow: hidden;
     position: fixed; 
     width: 100%;
@@ -24,13 +24,11 @@
   
   /* Change the color of links on hover */
   .navbar a:hover {
-    background-color: #D6E2E9;
     color: #2F404F;
   }
   
   /* Add a color to the active/current link */
   .navbar a.active {
-    background-color:white;
     color: #1E2A37;
     font-weight: bold;
   }
