@@ -1,7 +1,7 @@
 
 
 .navbar {
-    background-color: #ffffff;
+    background-color: #D6E2E9;
     overflow: hidden;
     position: fixed; 
     width: 100%;
@@ -15,7 +15,7 @@
   /* Style the links inside the navigation bar */
   .navbar a {
     float: left;
-    color: #450920;
+    color: #1E2A37;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -24,14 +24,14 @@
   
   /* Change the color of links on hover */
   .navbar a:hover {
-    background-color: white;
-    color: #A53860;
+    background-color: #D6E2E9;
+    color: #2F404F;
   }
   
   /* Add a color to the active/current link */
   .navbar a.active {
     background-color:white;
-    color: #450920;
+    color: #1E2A37;
     font-weight: bold;
   }
 
