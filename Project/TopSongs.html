@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="pyconvert.js">displayTop20()</script>
+    <script type="text/javascript" src="pyconvert.js"></script>
     
-    <body>
-      
+    <body onload="displayTop10()">
         <div class="navbar">
             <a href="https://nshelburne.github.io/ist263/Project/Index.html">Home</a>
             <a class="active" href="https://nshelburne.github.io/ist263/Project/TopSongs.html">Try it Out</a>
@@ -13,12 +12,12 @@
 
 
           <div class="container">
-            <div class="item a" style="width: 300px; height: 300px; overflow: hidden"> <iframe src="https://open.spotify.com/embed/track/1YLUG87uQnxKbCK5YZzmes" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"style="position: relative; top: -80px"></iframe>Song #1</div>
-            <div class="item b"><iframe src="https://open.spotify.com/embed/track/"+ id="num1" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>Song #2</div>
-            <div class="item c"><iframe src="https://open.spotify.com/embed/track/0Y2gj3rSBjtB13CsfOnSDF" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>Song #3</div>
-            <div class="item d"><iframe src="https://open.spotify.com/embed/track/1YLUG87uQnxKbCK5YZzmes" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>Song #4</div>
-            <div class="item e"><iframe src="https://open.spotify.com/embed/track/4hGHcdD5IwjAkftalZm5an" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>Song #5</div>
-            <div class="item f"><iframe src="https://open.spotify.com/embed/track/1YLUG87uQnxKbCK5YZzmes" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>Song #6</div>
+            <div class="item b" id="num1"></div>
+            <div class="item c"id="num2">Song #2</div>
+            <div class="item d" id=num3>Song #3</div>
+            <div class="item e" id="num4">Song #4</div>
+            <div class="item a" id="num5" style="width: 300px; height: 300px; overflow: hidden">Song #5</div>
+            <div class="item f" id="num6">Song #6</div>
           </div>
     </body>
 

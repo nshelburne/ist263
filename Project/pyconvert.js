@@ -1,23 +1,10 @@
-//"https://spotifycharts.com/regional/br/daily/latest/download"
-
 /*return value selected value*/
 function getCountry() {
     var obj = document.getElementById("mySelect");
     document.getElementById("entCountry").innerHTML = obj.options[obj.selectedIndex].text;
     console.log(obj.options[obj.selectedIndex].text);
     return obj.options[obj.selectedIndex].text;
-
 }
-  
-/*used on test variable "data"*/
-function convertCSVToJSON(str, delimiter = ' ') {
-    const titles = str.slice(0, str.indexOf(',')).split(delimiter);
-    const rows = str.slice(str.indexOf(',') + 1).split(',');
-    return rows.map(row => {
-        const values = row.split(delimiter);
-        return titles.reduce((object, curr, i) => (object[curr] = values[i], object), {})
-    });
-};
 
 function getRawData(){
     /*d3.csv("https://cors-anywhere.herokuapp.com/https://spotifycharts.com/regional/"+str+"/daily/latest/download", function(data) {
@@ -54,13 +41,24 @@ function getRawData(){
             }
         }
     }
+function (){}
 
-function displayTop20(array){
-let songURIList;
-songURIList = "71X7bPDljJHrmEGYCe7kQ8", "1YLUG87uQnxKbCK5YZzmes";
-document.getElementById("num1").innerHTML= songURIList[0];
-}
-/* testing Purposes*/
+function displayTop10(){
+    let songURIList;
+    songURIList = ["71X7bPDljJHrmEGYCe7kQ8", "1YLUG87uQnxKbCK5YZzmes","1YLUG87uQnxKbCK5YZzmes","71X7bPDljJHrmEGYCe7kQ8","1YLUG87uQnxKbCK5YZzmes","71X7bPDljJHrmEGYCe7kQ8","1YLUG87uQnxKbCK5YZzmes"];
+    let songId;
+    songId=["num1","num2","num3","num4","num5","num6"];
+    
+    for (var i = 0; i < 6; i++) {
+        var link = "https://open.spotify.com/embed/track/" + songURIList[i];
+        var iframe = document.createElement('iframe');
+        iframe.frameBorder=0;
+        iframe.width="300px";
+        iframe.height="380px";
+        iframe.id="randomid";
+        iframe.setAttribute("src", link);
+
+        document.getElementById(songId[i]).appendChild(iframe);
+ }}
 
 
-console.log(convertCSVToJSON(data, ','))
