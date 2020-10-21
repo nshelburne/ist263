@@ -19,31 +19,48 @@ function convertCSVToJSON(str, delimiter = ' ') {
     });
 };
 
-function getRawData(str){
-    d3.csv("https://cors-anywhere.herokuapp.com/https://spotifycharts.com/regional/"+str+"/daily/latest/download", function(data) {
+function getRawData(){
+    /*d3.csv("https://cors-anywhere.herokuapp.com/https://spotifycharts.com/regional/"+str+"/daily/latest/download", function(data) {
     // Process the data, for the url provided
         for (var i = 1; i < data.length; i++) {
             /*console.log(data[i].Position);
             console.log(data[i].TrackName);
             console.log(data[i].Artist);
             console.log(data[i].Streams);
-            console.log(data[i].Url);*/
+            console.log(data[i].Url);
             console.log(data);
         }
-    });
-}
+    });*/
+    
+        /* getting dropdown value */
+        var element = document.getElementById("mySelect");  
+        var country = element.value;                        
 
-function getTop20(){/*should probably be apart of getRawData*/}
+        /* concatenate url for file request */
+        var url = 'https://cors-anywhere.herokuapp.com/https://spotifycharts.com/regional/'+country+'/daily/latest/download';
+        
+        /* make get request */
+        const Http = new XMLHttpRequest();
+        Http.open("GET", url);
+        Http.send();
+         
+        /* parse data */
+        Http.onreadystatechange = (e) => {       
+          var csv = Http.responseText;
+          var lines = csv.split("\n");
 
-/* Filled for testing*/
-/*Should be initially empty, then filled with parsed data from csv file*/
+          for (var i = 1; i < lines.length; i++) {
+            document.getElementById("results").innerHTML += lines[i]+'<br>'; 
+            }
+        }
+    }
+
+function displayTop20(array){
 let songURIList;
-songURIList = "lBDxNz93h4cBElMpeINpL", "1YLUG87uQnxKbCK5YZzmes";
-
+songURIList = "71X7bPDljJHrmEGYCe7kQ8", "1YLUG87uQnxKbCK5YZzmes";
+document.getElementById("num1").innerHTML= songURIList[0];
+}
 /* testing Purposes*/
-let data;
-data = 'id, name, email\n0, Todd, todd@gmail.com\n1, Petra, petra@gmail.com';
 
-var menuSubmit = document.querySelector(".submit-button");
 
 console.log(convertCSVToJSON(data, ','))
