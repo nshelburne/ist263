@@ -1,0 +1,43 @@
+
+@media only screen and (max-width: 600px) {
+    nav {
+    margin-bottom: 30px; 
+    background-color: #55767a;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    }
+    nav a {color: #ffffff;}
+    nav a:hover {background-color: #005F6B;}
+}  
+
+body {
+    font-family: "Palatino Linotype";
+    background-color: #c2d8d8d8;
+    color: #343838;
+}
+.indexImg {
+    float:left; 
+    margin-right: 15px;
+    max-width: 100%;
+}
+
+
+h1,h2 {color: #343838} 
+
+.evenrow {background-color: rgba(113, 132, 173, 0.664);}
+
+h1 {font-size: 2em;}
+
+h2 {font-size: 1.5em;}
+
+.addBox {display: flex; background-color: #def5f5d8; border-radius: 1em;}
+.addBox info {padding: 20px;}
+.info i1 {flex: 2;order: 2;}
+.info i2 {
+    flex: 1;
+    order: 1;
+    flex-wrap: wrap;
+}
+footer{font-size: .7em}
+footer a{ float: right;}
