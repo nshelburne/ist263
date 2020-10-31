@@ -25,7 +25,8 @@ body {
 
 h1,h2 {color: #343838} 
 
-.evenrow {background-color: rgba(113, 132, 173, 0.664);}
+.evenrow {background-color: rgba(20, 24, 32, 0.664);
+            color: white;}
 
 h1 {font-size: 2em;}
 
