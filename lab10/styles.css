@@ -23,7 +23,9 @@ body {
 }
 
 
-h1,h2 {color: #343838} 
+h1,h2 {
+    font-family: 'Lato', sans-serif;
+    color: #343838} 
 
 .evenrow {background-color: rgba(20, 24, 32, 0.664);
             color: white;}
