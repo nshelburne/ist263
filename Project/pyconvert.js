@@ -7,17 +7,6 @@ function getCountry() {
 }
 
 function getRawData(){
-    /*d3.csv("https://cors-anywhere.herokuapp.com/https://spotifycharts.com/regional/"+str+"/daily/latest/download", function(data) {
-    // Process the data, for the url provided
-        for (var i = 1; i < data.length; i++) {
-            /*console.log(data[i].Position);
-            console.log(data[i].TrackName);
-            console.log(data[i].Artist);
-            console.log(data[i].Streams);
-            console.log(data[i].Url);
-            console.log(data);
-        }
-    });*/
     
         /* getting dropdown value */
         var element = document.getElementById("mySelect");  
@@ -40,7 +29,8 @@ function getRawData(){
             document.getElementById("results").innerHTML += lines[i]+'<br>'; 
             }
         }
-        window.location.href= "https://nshelburne.github.io/ist263/Project/TopSongs.html" + "#" + text;
+        var rUrl = "https://nshelburne.github.io/ist263/Project/TopSongs.htm?cc=" + country;
+            window.location.href= rUrl;
     }
 
 
