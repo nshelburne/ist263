@@ -44,6 +44,7 @@ function displayTop10(){
     var URI4= 4;
     var URI5= 5;
     var URI6= 6;
+    let songURIList1
     songURIList1=[URI1, URI2, URI3, URI4, URI5, URI6];
     songURIList = ["71X7bPDljJHrmEGYCe7kQ8", "1YLUG87uQnxKbCK5YZzmes","1YLUG87uQnxKbCK5YZzmes","71X7bPDljJHrmEGYCe7kQ8","1YLUG87uQnxKbCK5YZzmes","71X7bPDljJHrmEGYCe7kQ8","1YLUG87uQnxKbCK5YZzmes"];/*Ur1 */
     let songId;
