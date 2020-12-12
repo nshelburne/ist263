@@ -39,11 +39,14 @@ function displayTop10(){
           var linesStrings = lines.toString();
           let songURIList;
           var songInfo;
+          let songInfo2;
           
           /*parse data to save URI code for top 6 songs;*/
           for (var i = 1; i < 7; i++) {
-            songInfo=linesStrings[i].split("/");
-            songURIList+=songInfo;
+            songInfo=linesStrings[i];
+            songInfo2=songInfo.split("/");
+            songinfoFin= songInfo2[songInfo.length-1];
+            songURIList+=songinfoFin;
             }
         }
 
