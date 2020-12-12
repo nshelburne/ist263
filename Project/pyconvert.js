@@ -21,7 +21,7 @@ function getCC(){
  /*Pull country code from URL */
  let params = new URLSearchParams(location.search);
  var countrycode;
- countrycode= params.get('name');
+ countrycode= params.get('cc');
 
  /* concatenate url for file request */
  var url = 'https://cors-anywhere.herokuapp.com/https://spotifycharts.com/regional/'+countrycode+'/daily/latest/download';
