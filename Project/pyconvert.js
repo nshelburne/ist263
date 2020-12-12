@@ -41,8 +41,7 @@ function getCC(){
     }
 
     console.log(lines); 
-    let lineslist = document.getElementById("results").innerHTML;
-    return lineslist;
+    return lines;
     }
 }
 
