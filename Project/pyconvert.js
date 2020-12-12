@@ -44,9 +44,8 @@ function displayTop10(){
           /*parse data to save URI code for top 6 songs;*/
           for (var i = 1; i < 7; i++) {
             songInfo=linesStrings[i];
-            songInfo2=songInfo.split("/");
-            songinfoFin= songInfo2[songInfo.length-1];
-            songURIList+=songinfoFin;
+            songInfo2=songInfo.splice(-22);
+            songURIList+=songInfo2;
             }
         }
 
