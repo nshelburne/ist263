@@ -16,6 +16,7 @@ function getRawData(){
         var rUrl = "https://nshelburne.github.io/ist263/Project/TopSongs.html?cc=" + country;
             window.location.href= rUrl;
     }
+
 function getCC(){
  /*Pull country code from URL */
  let params = new URLSearchParams(location.search);
@@ -51,7 +52,7 @@ function displayTop10(l){
             console.log(songInfo);
             songInfo2=songInfo.splice(-22);
             songURIList+=songInfo2;
-            
+
     let songId;
     songId=["num1","num2","num3","num4","num5","num6"];/*Order of Songs */
     /* display spotify web players for coresponding songs */
@@ -68,4 +69,4 @@ function displayTop10(l){
     }
 }
 
-
+}
