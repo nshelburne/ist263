@@ -16,7 +16,7 @@
   /* Style the links inside the navigation bar */
   .navbar a {
     float: left;
-    color: #1E2A37;
+    color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -131,23 +131,21 @@
 }
 
 .a {
-  background: #450920;
+  background: #2F404F;
 }
 .b {
-  background: #450920;
+  background: #2F404F;
 }
 .c {
-  background: #450920;
+  background: #2F404F;
 }
 .d {
-  background: #450920;
+  background: #2F404F;
 }
 .e {
-  background: #450920;
+  background: #2F404F;
 }
-.f {
-  background: #450920;
-}
+
 .a {
   grid-column-start: 2;
   grid-column-end: 3;

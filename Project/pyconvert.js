@@ -53,16 +53,16 @@ function displayTop10(l){
         let songInfo2;
         
         /*parse data to save URI code for top 6 songs;*/
-          for (var i = 1; i < 7; i++) {
+          for (var i = 1; i < 6; i++) {
             songInfo=linesStrings[i];
             console.log(songInfo);
             songInfo2=songInfo.splice(-22);
             songURIList+=songInfo2;
 
     let songId;
-    songId=["num1","num2","num3","num4","num5","num6"];/*Order of Songs */
+    songId=["num1","num2","num3","num4","num5"];/*Order of Songs */
     /* display spotify web players for coresponding songs */
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 5; i++) {
         var link = "https://open.spotify.com/embed/track/" + songURIList[i];
         var iframe = document.createElement('iframe');
         iframe.frameBorder=0;
