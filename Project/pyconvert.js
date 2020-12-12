@@ -38,13 +38,13 @@ function getRawData(){
 
 function displayTop10(){
     let songURIList;
-    var URI1= ;
-    var URI2=;
-    var URI3=;
-    var URI4=;
-    var URI5=;
-    var URI6=;
-
+    var URI1= 1;
+    var URI2= 2;
+    var URI3= 3;
+    var URI4= 4;
+    var URI5= 5;
+    var URI6= 6;
+    songURIList1=[URI1, URI2, URI3, URI4, URI5, URI6];
     songURIList = ["71X7bPDljJHrmEGYCe7kQ8", "1YLUG87uQnxKbCK5YZzmes","1YLUG87uQnxKbCK5YZzmes","71X7bPDljJHrmEGYCe7kQ8","1YLUG87uQnxKbCK5YZzmes","71X7bPDljJHrmEGYCe7kQ8","1YLUG87uQnxKbCK5YZzmes"];/*Ur1 */
     let songId;
     songId=["num1","num2","num3","num4","num5","num6"];/*Name of Songs */
