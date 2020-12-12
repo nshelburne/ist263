@@ -35,8 +35,14 @@ function getCC(){
  Http.onreadystatechange = (e) => {       
    var csv = Http.responseText;
    var lines = csv.split("\n");
-    console.log(lines);  
-    return lines;
+
+    for (var i = 1; i < lines.length; i++) {
+        document.getElementById("results").innerHTML += lines[i]; 
+    }
+
+    console.log(lines); 
+    let lineslist = document.getElementById("results").innerHTML;
+    return lineslist;
     }
 }
 
