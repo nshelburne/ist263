@@ -24,11 +24,13 @@ function getRawData(){
         Http.onreadystatechange = (e) => {       
           var csv = Http.responseText;
           var lines = csv.split("\n");
+          /*var songName;*/
 
-          for (var i = 1; i < lines.length; i++) {
+          for (var i = 1; i < 7; i++) {
             document.getElementById("results").innerHTML += lines[i]+'<br>'; 
             }
         }
+        /* Pass data from index page to top20 page */
         var rUrl = "https://nshelburne.github.io/ist263/Project/TopSongs.html?cc=" + country;
             window.location.href= rUrl;
     }
@@ -36,9 +38,16 @@ function getRawData(){
 
 function displayTop10(){
     let songURIList;
-    songURIList = ["71X7bPDljJHrmEGYCe7kQ8", "1YLUG87uQnxKbCK5YZzmes","1YLUG87uQnxKbCK5YZzmes","71X7bPDljJHrmEGYCe7kQ8","1YLUG87uQnxKbCK5YZzmes","71X7bPDljJHrmEGYCe7kQ8","1YLUG87uQnxKbCK5YZzmes"];
+    var URI1= ;
+    var URI2=;
+    var URI3=;
+    var URI4=;
+    var URI5=;
+    var URI6=;
+
+    songURIList = ["71X7bPDljJHrmEGYCe7kQ8", "1YLUG87uQnxKbCK5YZzmes","1YLUG87uQnxKbCK5YZzmes","71X7bPDljJHrmEGYCe7kQ8","1YLUG87uQnxKbCK5YZzmes","71X7bPDljJHrmEGYCe7kQ8","1YLUG87uQnxKbCK5YZzmes"];/*Ur1 */
     let songId;
-    songId=["num1","num2","num3","num4","num5","num6"];
+    songId=["num1","num2","num3","num4","num5","num6"];/*Name of Songs */
     
     for (var i = 0; i < 6; i++) {
         var link = "https://open.spotify.com/embed/track/" + songURIList[i];
