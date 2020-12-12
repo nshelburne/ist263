@@ -40,7 +40,7 @@ function getCC(){
 }
 
 function displayTop10(l){
-        let lines = l;
+        var lines = l;
         var linesStrings = lines.toString();
         let songURIList;
         var songInfo;
