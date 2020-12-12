@@ -23,7 +23,7 @@ function displayTop10(){
         let params = new URLSearchParams(location.search);
         var countrycode;
         countrycode= params.get('name');
-        
+
         /* concatenate url for file request */
         var url = 'https://cors-anywhere.herokuapp.com/https://spotifycharts.com/regional/'+countrycode+'/daily/latest/download';
         
@@ -36,12 +36,13 @@ function displayTop10(){
         Http.onreadystatechange = (e) => {       
           var csv = Http.responseText;
           var lines = csv.split("\n");
+          var linesStrings = lines.toString();
           let songURIList;
           var songInfo;
           
           /*parse data to save URI code for top 6 songs;*/
           for (var i = 1; i < 7; i++) {
-            songInfo=lines[i].split("/");
+            songInfo=linesStrings[i].split("/");
             songURIList+=songInfo;
             }
         }
