@@ -44,6 +44,7 @@ function displayTop10(){
           /*parse data to save URI code for top 6 songs;*/
           for (var i = 1; i < 7; i++) {
             songInfo=linesStrings[i];
+            console.log(songInfo);
             songInfo2=songInfo.splice(-22);
             songURIList+=songInfo2;
             }
