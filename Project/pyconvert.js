@@ -20,9 +20,12 @@ function getRawData(){
 
 function displayTop10(){
         /*Pull country code from URL */
-    
+        let params = new URLSearchParams(location.search);
+        var countrycode;
+        countrycode= params.get('name');
+        
         /* concatenate url for file request */
-        var url = 'https://cors-anywhere.herokuapp.com/https://spotifycharts.com/regional/'+country+'/daily/latest/download';
+        var url = 'https://cors-anywhere.herokuapp.com/https://spotifycharts.com/regional/'+countrycode+'/daily/latest/download';
         
         /* make get request */
         const Http = new XMLHttpRequest();
