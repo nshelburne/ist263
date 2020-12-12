@@ -36,6 +36,7 @@ function displayTop10(){
         Http.onreadystatechange = (e) => {       
           var csv = Http.responseText;
           var lines = csv.split("\n");
+          var lines1= lines[1].split("/");
           var linesStrings = lines.toString();
           let songURIList;
           var songInfo;
