@@ -29,7 +29,7 @@ function getRawData(){
             document.getElementById("results").innerHTML += lines[i]+'<br>'; 
             }
         }
-        var rUrl = "https://nshelburne.github.io/ist263/Project/TopSongs.htm?cc=" + country;
+        var rUrl = "https://nshelburne.github.io/ist263/Project/TopSongs.html?cc=" + country;
             window.location.href= rUrl;
     }
 
