@@ -35,7 +35,8 @@ function getCC(){
  Http.onreadystatechange = (e) => {       
    var csv = Http.responseText;
    var lines = csv.split("\n");
-     return lines;
+    console.log(lines);  
+    return lines;
     }
 }
 
