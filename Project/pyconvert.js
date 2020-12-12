@@ -16,41 +16,42 @@ function getRawData(){
         var rUrl = "https://nshelburne.github.io/ist263/Project/TopSongs.html?cc=" + country;
             window.location.href= rUrl;
     }
+function getCC(){
+ /*Pull country code from URL */
+ let params = new URLSearchParams(location.search);
+ var countrycode;
+ countrycode= params.get('name');
 
+ /* concatenate url for file request */
+ var url = 'https://cors-anywhere.herokuapp.com/https://spotifycharts.com/regional/'+countrycode+'/daily/latest/download';
+ 
+ /* make get request */
+ const Http = new XMLHttpRequest();
+ Http.open("GET", url);
+ Http.send();
+  
+ /* parse data by line*/ 
+ Http.onreadystatechange = (e) => {       
+   var csv = Http.responseText;
+   var lines = csv.split("\n");
+     return lines;
+    }
+}
 
-function displayTop10(){
-        /*Pull country code from URL */
-        let params = new URLSearchParams(location.search);
-        var countrycode;
-        countrycode= params.get('name');
-
-        /* concatenate url for file request */
-        var url = 'https://cors-anywhere.herokuapp.com/https://spotifycharts.com/regional/'+countrycode+'/daily/latest/download';
+function displayTop10(l){
+        let lines = l;
+        var linesStrings = lines.toString();
+        let songURIList;
+        var songInfo;
+        let songInfo2;
         
-        /* make get request */
-        const Http = new XMLHttpRequest();
-        Http.open("GET", url);
-        Http.send();
-         
-        /* parse data by line*/ 
-        Http.onreadystatechange = (e) => {       
-          var csv = Http.responseText;
-          var lines = csv.split("\n");
-          var lines1= lines[1].split("/");
-          var linesStrings = lines.toString();
-          let songURIList;
-          var songInfo;
-          let songInfo2;
-          
-          /*parse data to save URI code for top 6 songs;*/
+        /*parse data to save URI code for top 6 songs;*/
           for (var i = 1; i < 7; i++) {
             songInfo=linesStrings[i];
             console.log(songInfo);
             songInfo2=songInfo.splice(-22);
             songURIList+=songInfo2;
-            }
-        }
-
+            
     let songId;
     songId=["num1","num2","num3","num4","num5","num6"];/*Order of Songs */
     /* display spotify web players for coresponding songs */
