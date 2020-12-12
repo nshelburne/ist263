@@ -6,54 +6,81 @@
     <style>
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif; 
-            background-color: #111111;
+            background-color: #4e62bb;
             color: #ffffff;
         }
         #slideshow-container {
-            background-color: #000000;
-            width: 1200px;
+            position: flex;
+            background-color: #ffffff;
+            width: 600px;
             margin: auto; /* margin auto is centering this container */        
         }
-        #next-container {
+        #nextimage-container {
+            position: flex;
             background-color: #ffffff;
-            width: 1000px;
+            width: 600px;
             margin: auto; /* margin auto is centering this container */        
         }
         #bigimages {margin-right: 100px;}
+        #nextbigimages {margin-right: 10px;}
         #planetinfo {padding: 100px;}
-        #thumbnails {width: 840px; margin: auto; padding-top: 20px;} 
+ 
         /* ^^ margin auto is centering this container */
-        #mercurythumb, #venusthumb, #earththumb, #marsthumb, 
         {width: 100px;}
         #venus, #earth, #mars, #venusinfo, #earthinfo, #marsinfo {display:none;}
+        #nearth, #nmars, #nmercury {display: none;}
+        .image {
+            position: absolute;
+            z-index: 0;
+        }
+        .nextimage{
+            
+            z-index: 1;
+        }
 
     </style>
     <script>
-       function PlanetsOff {
+       function PlanetsOff() {
         document.getElementById('mercury').style.display= 'none';
         document.getElementById('venus').style.display= 'none';
         document.getElementById('earth').style.display= 'none';
         document.getElementById('mars').style.display= 'none';
+        document.getElementById('nmercury').style.display= 'none';
+        document.getElementById('nvenus').style.display= 'none';
+        document.getElementById('nearth').style.display= 'none';
+        document.getElementById('nmars').style.display= 'none';
         document.getElementById('mercuryinfo').style.display= 'none';
         document.getElementById('venusinfo').style.display= 'none';
         document.getElementById('earthinfo').style.display= 'none';
         document.getElementById('marsinfo').style.display= 'none';
        }
-       function MercuryOn {
+       function MercuryOn(){
         document.getElementById('mercury').style.display= 'block';
         document.getElementById('mercuryinfo').style.display= 'block';
        }
-       function VenusOn {
+       function VenusOn() {
         document.getElementById('venus').style.display= 'block';
         document.getElementById('venusinfo').style.display= 'block';
        }
-       function EarthOn{
+       function EarthOn(){
         document.getElementById('earth').style.display= 'block';
         document.getElementById('earthinfo').style.display= 'block';
        }
-       function MarsOn{
+
+       function MarsOn(){
         document.getElementById('mars').style.display= 'block';
-        document.getElementById('marsinfo').style.display= 'block';
+       }
+       function nMercuryOn(){
+        document.getElementById('nmercury').style.display= 'block';
+       }
+       function nVenusOn() {
+        document.getElementById('nvenus').style.display= 'block';
+       }
+       function nEarthOn(){
+        document.getElementById('nearth').style.display= 'block';
+       }
+       function nMarsOn(){
+        document.getElementById('nmars').style.display= 'block';
        }
     </script>
 </head>
@@ -61,7 +88,7 @@
 
 <body>
 <div id="slideshow-container">
-    <div id="bigimages">
+    <div  class= "image" id="bigimages">
         <img src="https://laferger.github.io/ist263/images/mecury.jpg" alt="mercury" id="mercury">
        <img src="https://laferger.github.io/ist263/images/venus.jpg" alt="venus" id="venus">
         <img src="https://laferger.github.io/ist263/images/earth.jpg" alt="earth" id="earth">
@@ -85,42 +112,16 @@
         <div id="marsinfo">
             <h2>Mars</h2>
             <p>This is project 4</p>
-        </div>
+        </div> 
     </div>
-    <div id="slideshow-container">
-        <div id="bigimages">
-            <img src="https://laferger.github.io/ist263/images/venus.jpg" alt="venus" id="venus">
-            <img src="https://laferger.github.io/ist263/images/earth.jpg" alt="earth" id="earth">
-            <img src="https://laferger.github.io/ist263/images/mars.jpg" alt="mars" id="mars">
-            <img src="https://laferger.github.io/ist263/images/mecury.jpg" alt="mercury" id="mercury">
+    <div id="nextimage-container">
+        <div class= "nextimage" id="bigimages">
+            <img src="https://laferger.github.io/ist263/images/venus.jpg" alt="venus" id="nvenus" onclick="PlanetsOff(); nMarsOn(); EarthOn();">
+            <img src="https://laferger.github.io/ist263/images/earth.jpg" alt="earth" id="nearth" onclick="PlanetsOff(); nMercuryOn(); MarsOn();">
+            <img src="https://laferger.github.io/ist263/images/mars.jpg" alt="mars" id="nmars" onclick="PlanetsOff(); nVenusOn(); MercuryOn();">
+            <img src="https://laferger.github.io/ist263/images/mecury.jpg" alt="mercury" id="nmercury" onclick="PlanetsOff(); nEarthOn(); VenusOn();">
             
         </div>
-        <div id="planetinfo">        
-            <h1>Planets Slideshow</h1>
-            <div id="mercuryinfo">
-                <h2>Mercury</h2>
-                <p>This is project 1</p>
-            </div>
-           <div id="venusinfo">
-                <h2>Venus</h2>
-                <p>This is project 2</p>
-            </div>
-            <div id="earthinfo">
-                <h2>Earth</h2>
-                <p>This is project 3</p>
-            </div>
-            <div id="marsinfo">
-                <h2>Mars</h2>
-                <p>This is project 4</p>
-            </div>
-        </div>
-    <div id="thumbnails">
-        <img src="https://laferger.github.io/ist263/images/mecury.jpg" alt="mercury" id="mercurythumb" onclick="PlanetsOff(); MercuryOn();">
-        <img src="https://laferger.github.io/ist263/images/venus.jpg" alt="venus" id="venusthumb" onclick="PlanetsOff(); VenusOn();">
-        <img src="https://laferger.github.io/ist263/images/earth.jpg" alt="earth" id="earththumb" onclick="PlanetsOff(); EarthOn();">
-        <img src="https://laferger.github.io/ist263/images/mars.jpg" alt="mars" id="marsthumb" onclick="PlanetsOff(); MarsOn();">
-      </div>
-
 </div>
 
 </body>
