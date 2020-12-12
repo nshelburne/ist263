@@ -40,6 +40,7 @@ function getRawData(){
             document.getElementById("results").innerHTML += lines[i]+'<br>'; 
             }
         }
+        window.location.href= "https://nshelburne.github.io/ist263/Project/TopSongs.html" + "#" + text;
     }
 
 
