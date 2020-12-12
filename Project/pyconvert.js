@@ -12,6 +12,15 @@ function getRawData(){
         var element = document.getElementById("mySelect");  
         var country = element.value;                        
 
+        /* Pass data from index page to top20 page */
+        var rUrl = "https://nshelburne.github.io/ist263/Project/TopSongs.html?cc=" + country;
+            window.location.href= rUrl;
+    }
+
+
+function displayTop10(){
+        /*Pull country code from URL */
+    
         /* concatenate url for file request */
         var url = 'https://cors-anywhere.herokuapp.com/https://spotifycharts.com/regional/'+country+'/daily/latest/download';
         
@@ -20,36 +29,23 @@ function getRawData(){
         Http.open("GET", url);
         Http.send();
          
-        /* parse data */
+        /* parse data by line*/ 
         Http.onreadystatechange = (e) => {       
           var csv = Http.responseText;
           var lines = csv.split("\n");
-          /*var songName;*/
-
+          let songURIList;
+          var songInfo;
+          
+          /*parse data to save URI code for top 6 songs;*/
           for (var i = 1; i < 7; i++) {
-            document.getElementById("results").innerHTML += lines[i]+'<br>'; 
+            songInfo=lines[i].split("/");
+            songURIList+=songInfo;
             }
         }
-        /* Pass data from index page to top20 page */
-        var rUrl = "https://nshelburne.github.io/ist263/Project/TopSongs.html?cc=" + country;
-            window.location.href= rUrl;
-    }
 
-
-function displayTop10(){
-    let songURIList;
-    var URI1= 1;
-    var URI2= 2;
-    var URI3= 3;
-    var URI4= 4;
-    var URI5= 5;
-    var URI6= 6;
-    let songURIList1;
-    songURIList1=[URI1, URI2, URI3, URI4, URI5, URI6];
-    songURIList = ["71X7bPDljJHrmEGYCe7kQ8", "1YLUG87uQnxKbCK5YZzmes","1YLUG87uQnxKbCK5YZzmes","71X7bPDljJHrmEGYCe7kQ8","1YLUG87uQnxKbCK5YZzmes","71X7bPDljJHrmEGYCe7kQ8","1YLUG87uQnxKbCK5YZzmes"];/*Ur1 */
     let songId;
-    songId=["num1","num2","num3","num4","num5","num6"];/*Name of Songs */
-    
+    songId=["num1","num2","num3","num4","num5","num6"];/*Order of Songs */
+    /* display spotify web players for coresponding songs */
     for (var i = 0; i < 6; i++) {
         var link = "https://open.spotify.com/embed/track/" + songURIList[i];
         var iframe = document.createElement('iframe');
@@ -60,6 +56,7 @@ function displayTop10(){
         iframe.setAttribute("src", link);
 
         document.getElementById(songId[i]).appendChild(iframe);
- }}
+    }
+}
 
 
